@@ -6,7 +6,7 @@
 #    By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/06 15:35:45 by lothieve          #+#    #+#              #
-#    Updated: 2019/11/08 10:21:12 by lothieve         ###   ########.fr        #
+#    Updated: 2019/11/08 13:36:09 by lothieve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -31,6 +31,7 @@ all:		${NAME}
 
 $(NAME):	${OBJS}
 			ar rcs ${NAME} ${OBJS}
+
 
 clean:		
 			${RM} ${OBJS}

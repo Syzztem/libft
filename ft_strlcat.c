@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 12:57:41 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/07 14:24:14 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/08 11:08:11 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,27 @@
 size_t
 	ft_strlcat(char *dst, const char *src, size_t size)
 {
-	size_t slen;
-	size_t dlen;
+	char		*d;
+	const char	*s = src;
+	size_t		i;
+	size_t		dlen;
 
-	slen = ft_strlen(src);
+	d = dst;
 	dlen = ft_strlen(dst);
-	if (dlen >= size)
-		return (size + slen);
-	if (slen + dlen < size)
-		ft_memcpy(dst + dlen, src, slen + 1);
-	else
+	dlen = (dlen >= size ? size : dlen);
+	i = size - dlen;
+	d += dlen;
+	if (!i)
+		return (dlen + ft_strlen(src));
+	while (*s)
 	{
-		ft_memcpy(dst + dlen, src, size - 1);
-		dst[dlen + size - 1] = 0;
+		if (i != 1)
+		{
+			*d++ = *s;
+			i--;
+		}
+		s++;
 	}
-	return (dlen + slen);
+	*d = 0;
+	return (dlen + s - src);
 }

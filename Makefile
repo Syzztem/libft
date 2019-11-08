@@ -6,7 +6,7 @@
 #    By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/06 15:35:45 by lothieve          #+#    #+#              #
-#    Updated: 2019/11/08 10:13:53 by lothieve         ###   ########.fr        #
+#    Updated: 2019/11/08 10:21:12 by lothieve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,12 @@ CC = clang
 
 RM = rm -rf
 
-all:		$(NAME)
+all:		${NAME}
 
 .c.o:
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES}
 
-${NAME}:	${OBJS}
+$(NAME):	${OBJS}
 			ar rcs ${NAME} ${OBJS}
 
 clean:		

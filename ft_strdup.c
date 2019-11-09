@@ -6,14 +6,14 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 08:33:28 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/07 08:00:52 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/08 15:58:33 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 char
-	*ft_strdup(char *src)
+	*ft_strdup(const char *src)
 {
 	char	*dup;
 	int		i;

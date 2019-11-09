@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/06 14:11:40 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/09 14:55:44 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/09 16:29:30 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 char			*ft_itoa(int nbr);
 char			*ft_strchr(const char *s, int c);
 char			*ft_strrchr(const char *s, int c);
-char			**ft_split(char *str, char c);
+char			**ft_split(const char *str, char c);
 char			*ft_strtrim(char const *s1, char const *set);
 char			*ft_strjoin(const char *s1, const char *s2);
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));

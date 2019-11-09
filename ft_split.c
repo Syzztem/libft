@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 17:52:50 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/08 13:50:26 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/09 16:29:34 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ static int
 }
 
 char
-	**ft_split(char *str, char c)
+	**ft_split(const char *str, char c)
 {
 	int		i;
 	char	**out;

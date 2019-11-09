@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 17:52:50 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/09 16:29:34 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/09 17:05:20 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ void
 }
 
 static int
-	wordlen(char *str, char c)
+	wordlen(const char *str, char c)
 {
 	int i;
 
@@ -48,7 +48,7 @@ static void
 }
 
 static int
-	count_words(char *str, char c)
+	count_words(const char *str, char c)
 {
 	int i;
 
@@ -83,7 +83,7 @@ char
 		{
 			if (!(out[i] = malloc(sizeof(char) * (wordlen(str, c) + 1))))
 				return (free_tab(out, i));
-			copy_to(out[i], &str, c);
+			copy_to(out[i], (char **)&str, c);
 			i++;
 		}
 	}

@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/10 15:30:43 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/10 15:41:40 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/10 18:50:38 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ t_list
 			return (NULL);
 		}
 		current = current->next;
+		lst = lst->next;
 	}
 	return (head);
 }

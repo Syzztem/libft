@@ -1,24 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_calloc.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/11/05 18:25:24 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/09 20:13:46 by lothieve         ###   ########.fr       */
+/*   Created: 2019/11/10 15:30:43 by lothieve          #+#    #+#             */
+/*   Updated: 2019/11/10 15:41:40 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_calloc(size_t count, size_t size)
+t_list
+	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
-	void *out;
+	t_list	*head;
+	t_list	*current;
 
-	if (count * size == 0)
-		return (ft_strdup(""));
-	if (!(out = malloc(count * size)))
-		return (NULL);
-	return (ft_bzero(out, count * size));
+	current = head;
+	while (lst)
+	{
+		if (!(current = ft_lstnew(f(lst))))
+		{
+			ft_lstclear(head, del);
+			return (NULL);
+		}
+		current = current->next;
+	}
+	return (head);
 }

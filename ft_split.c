@@ -6,13 +6,13 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/08/05 17:52:50 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/09 17:05:20 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/10 15:20:34 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void
+static void
 	*free_tab(char **tab, int i)
 {
 	while (--i >= 0)

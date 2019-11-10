@@ -6,25 +6,23 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 13:57:02 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/06 17:21:37 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/09 20:26:02 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static char
-	*ft_strrcpy(char *dest, char *src, int r)
-{
-	int i;
-
-	i = -1;
-	while (++i < r)
-		dest[i] = src[i];
-	return (dest);
-}
-
 void
 	*ft_memcpy(void *dst, const void *src, size_t n)
 {
-	return (ft_strrcpy((char *)dst, (char *)src, n));
+	unsigned char		*d;
+	unsigned const char *s;
+
+	d = dst;
+	s = src;
+	if (!dst && !src)
+		return (NULL);
+	while (n--)
+		*d++ = *s++;
+	return (dst);
 }

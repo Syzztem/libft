@@ -6,7 +6,7 @@
 #    By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/08/06 15:35:45 by lothieve          #+#    #+#              #
-#    Updated: 2019/11/08 19:14:07 by lothieve         ###   ########.fr        #
+#    Updated: 2019/11/09 18:46:07 by lothieve         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,6 +34,7 @@ all:		${NAME}
 			${CC} ${CFLAGS} -c $< -o ${<:.c=.o} -I ${INCLUDES}
 
 bonus:		${OBJS} ${OBJB}
+			ar rcs ${NAME} ${OBJS} ${OBJSB}
 
 $(NAME):	${OBJS}
 			ar rcs ${NAME} ${OBJS}

@@ -6,7 +6,7 @@
 /*   By: lothieve <lothieve@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/11/04 14:56:29 by lothieve          #+#    #+#             */
-/*   Updated: 2019/11/06 17:16:51 by lothieve         ###   ########.fr       */
+/*   Updated: 2019/11/09 20:21:21 by lothieve         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,8 @@ void
 	char *d;
 	char *s;
 
+	if (!dst && !src)
+		return (NULL);
 	d = (char *)dst;
 	s = (char *)src;
 	if (d < s)
